@@ -1,69 +1,94 @@
 .boardTile {
-    background-color: #dff4ff;
-    border-radius: 4px;
-    width: 9vw;
-    height: 9vw;
-    max-width: 60px;
-    max-height: 60px;
-    margin: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #dff4ff;
+  border-radius: 4px;
+  width: 9vw;
+  height: 9vw;
+  max-width: 60px;
+  max-height: 60px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tileCount {
-    color: hsl(201, 100%, 44%);
-    opacity: 0.2;
-    font-size: 20px;
-    font-weight: 700;
+  color: hsl(201, 100%, 44%);
+  opacity: 0.2;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .boardRow {
-    display: flex;
+  display: flex;
 }
 
 .boardBody {
-    position: relative;
+  position: relative;
 }
 
 .body {
-    background-color: #E1E1E1;
+  background-color: #e1e1e1;
 }
 
 .marble {
-    width: 20px;
-    height: 20px;
-    background-color: #ff0055;
-    border-radius: 100%;
-    position: absolute;
-    bottom: -30px;
-    left: min(20px, 4.5vw);
-    transition: all 1s;
+  width: 20px;
+  height: 20px;
+  background-color: #ff0055;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -30px;
+  left: min(20px, 4.5vw);
+  transition: all 1s;
 }
 
 .dice {
-    transition: all 1s;
-    cursor: pointer;
-    max-width: 70px;
+  transition: all 0.2s;
+  cursor: pointer;
+  max-width: 70px;
+}
+.diceLocked {
+  filter: grayscale(100%);
 }
 
 .App {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
 .resetButton {
-    all: unset;
-    border: 1px solid hsl(201, 100%, 54%);
-    color: hsl(201, 100%, 54%);
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #dff4ff;
-    outline: inherit;
-    cursor: pointer;
+  all: unset;
+  border: 1px solid hsl(201, 100%, 54%);
+  color: hsl(201, 100%, 54%);
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #dff4ff;
+  outline: inherit;
+  cursor: pointer;
+}
+
+.snake {
+  position: absolute;
+}
+
+.snake1 {
+  top: 0;
+  left: 50px;
+}
+
+.snake2 {
+  top: 70px;
+  left: 390px;
+  height: 320px;
+  transform: rotateZ(20deg);
+}
+
+.snake3 {
+  bottom: 20px;
+  right: 20px;
+  height: 90px;
 }
