@@ -5,6 +5,7 @@ export default function useGameState() {
     let history = [];
     const [marblePosition, setMarblePosition] = useState(-1);
     const [dice, setDice] = useState(1);
+    // timestamp of last dice roll, to move marble even if 2 consecutive throws are same
     const [seed, setSeed] = useState(new Date());
     /**
      * Roll the dice
