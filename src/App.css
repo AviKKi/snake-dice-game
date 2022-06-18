@@ -1,38 +1,69 @@
+.boardTile {
+    background-color: #dff4ff;
+    border-radius: 4px;
+    width: 9vw;
+    height: 9vw;
+    max-width: 60px;
+    max-height: 60px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tileCount {
+    color: hsl(201, 100%, 44%);
+    opacity: 0.2;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.boardRow {
+    display: flex;
+}
+
+.boardBody {
+    position: relative;
+}
+
+.body {
+    background-color: #E1E1E1;
+}
+
+.marble {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0055;
+    border-radius: 100%;
+    position: absolute;
+    bottom: -30px;
+    left: min(20px, 4.5vw);
+    transition: all 1s;
+}
+
+.dice {
+    transition: all 1s;
+    cursor: pointer;
+    max-width: 70px;
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.resetButton {
+    all: unset;
+    border: 1px solid hsl(201, 100%, 54%);
+    color: hsl(201, 100%, 54%);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #dff4ff;
+    outline: inherit;
+    cursor: pointer;
 }
